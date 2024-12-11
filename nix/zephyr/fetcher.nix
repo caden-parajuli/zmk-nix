@@ -8,7 +8,7 @@
 }:
 
 let
-  west = python3.withPackages (ps: [ ps.west ps.pyelftools ]);
+  west = python3.withPackages (ps: [ ps.west ps.pyelftools ps.setuptools ]);
 in
 
 {

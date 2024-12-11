@@ -21,8 +21,11 @@
     ninja
     python3.pythonOnBuildForHost.pkgs.west
     python3.pythonOnBuildForHost.pkgs.pyelftools
-    python3.pythonOnBuildForHost.pkgs.setuptools
   ] ++ (args.nativeBuildInputs or []);
+
+  propagatedBuildInputs = [
+    python3.pythonOnBuildForHost.pkgs.setuptools
+  ];
 
   westDeps = args.westDeps or (fetchZephyrDeps ({
     name = "${finalAttrs.finalPackage.name}-west-deps";
