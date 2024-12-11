@@ -129,6 +129,7 @@ in stdenv.mkDerivation ((lib.removeAttrs args [ "hash" ]) // {
     yq
   ];
 
+
   env.GIT_SSL_CAINFO = "${cacert}/etc/ssl/certs/ca-bundle.crt";
 
   dontFixup = true;
