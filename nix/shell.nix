@@ -29,6 +29,7 @@ mkShell {
       # For ZMK Studio builds
       ps.protobuf
       ps.grpcio-tools
+      ps.setuptools
     ] ++ (extraPythonPackages ps)))
     gcc-arm-embedded
     protobuf
